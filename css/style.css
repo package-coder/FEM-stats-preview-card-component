@@ -1,0 +1,108 @@
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+}
+
+body{
+    padding: 1rem;
+}
+
+:root{
+    --color-very-dark-blue: hsl(233, 47%, 7%);
+    --color-dark-desat-blue: hsl(244, 38%, 16%);
+    --color-soft-violet: hsl(277, 64%, 61%);
+    --color-white-primary: hsl(0, 0%, 100%);
+    --color-light-white-primary: hsla(0, 0%, 100%, 0.75);
+    --color-semilight-white-primary: hsla(0, 0%, 100%, 0.6);
+}
+
+
+.sketch-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+    background-color: var(--color-very-dark-blue);
+}
+
+.preview-card,
+.preview-card__image{
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-dark-desat-blue);
+    display: inline-block;
+}
+
+.preview-card--mark{
+    color: var(--color-soft-violet);    
+}
+
+.preview-card__header{
+    padding: 0 1rem 2rem 1rem;
+    text-align: center;
+    word-break: break-word;
+}
+
+.preview-card__image{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    max-width: 345px;
+}
+
+.preview-card__header--heading,
+.preview-card__content--stat-heading{
+    color: var(--color-white-primary);
+    font-weight: 700;
+}
+
+.preview-card__header--heading{
+    font-size: 1.85rem;
+    width: 14ch;
+    margin-bottom: 0.8rem;
+}
+
+.preview-card__header--content{
+    color: var(--color-light-white-primary);    
+    line-height: 1.5rem;
+    font-size: 0.95rem;
+    width: 28ch;
+}
+
+.preview-card__content{
+    text-align: center;
+}
+
+.preview-card__content--stat-header{
+    margin-bottom: 1.5rem;
+}
+
+.preview-card__content--stat-heading{
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+}
+
+.preview-card__content--stat-content{
+    color: var(--color-semilight-white-primary);    
+    font-size: 0.8rem;
+}
+
+.flex{
+    display: flex;
+}
+.flex--column{
+    flex-direction: column;
+}
+
+.flex--center{
+    align-items: center;
+    justify-content: center;
+}
