@@ -35,8 +35,12 @@ body{
 }
 
 .preview-card,
-.preview-card__image{
-    border-radius: 10px;
+.preview-card__image-div{
+    border-radius: 5px;
+}
+
+.preview-card{
+    border-radius: 5px;
     font-family: 'Inter', sans-serif;
     background-color: var(--color-dark-desat-blue);
     display: inline-block;
@@ -47,15 +51,28 @@ body{
 }
 
 .preview-card__header{
-    padding: 0 1rem 2rem 1rem;
+    margin-bottom: 2rem;
     text-align: center;
     word-break: break-word;
 }
 
-.preview-card__image{
+.preview-card__image-div{
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    max-width: 345px;
+    width: 345px;
+    height: 275px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-soft-violet);
+}
+
+.preview-card > .preview-card__image-div[src-name="mobile"]{
+    background-image: url(/images/image-header-mobile.jpg);
+}
+
+.preview-card__header,
+.preview-card__content{
+    margin: 2rem 0;
 }
 
 .preview-card__header--heading,
@@ -81,7 +98,7 @@ body{
     text-align: center;
 }
 
-.preview-card__content--stat-header{
+.preview-card__content--stat-header:not(:last-child){
     margin-bottom: 1.5rem;
 }
 
@@ -95,14 +112,56 @@ body{
     font-size: 0.8rem;
 }
 
+@media screen and (min-width: 376px) {
+        
+    .grid--2x2{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .grid-index--0-0{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+    
+    .grid-index--1-0{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .grid-rowspan-2{
+        grid-row: 1 / span 2;
+    }
+
+
+    .preview-card__content{
+        text-align: left;
+        flex-direction: row;
+    }
+}
+
+.grid{
+    display: grid;
+}
+
+
 .flex{
     display: flex;
 }
+
 .flex--column{
     flex-direction: column;
 }
 
-.flex--center{
+.flex--row{
+    flex-direction: row;
+}
+
+.flex--centered{
     align-items: center;
     justify-content: center;
+}
+
+.bg-blend-mode--multiply{
+    background-blend-mode: multiply;
 }

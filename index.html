@@ -21,13 +21,14 @@
   
 </head>
 <body class="sketch-div">
-  <div class="preview-card">
-    <img src="images/image-header-desktop.jpg" alt="image-header-desktop.jpg" class="preview-card__image">
-    <header class="preview-card__header flex flex--column flex--center">
+  <div class="preview-card grid grid--2x2">
+    <div class="preview-card__image-div grid-rowspan-2 bg-blend-mode--multiply" src-name="mobile">
+    </div>
+    <header class="preview-card__header grid-index--0-0 flex flex--column flex--centered">
       <h1 class="preview-card__header--heading">Get <span class="preview-card--mark">insights</span> that help your business grow.</h1>
       <p class="preview-card__header--content">Discover the benefits of data analytics and make better decisions regarding revenue, costumer experience, and overall efficiency.</p>
     </header>
-    <div class="preview-card__content">
+    <div class="preview-card__content grid-index--1-0 flex flex--column flex--centered">
       <div class="preview-card__content--stat-header">
         <header class="preview-card__content--stat-heading">10k+</header>
         <p class="preview-card__content--stat-content">COMPANIES</p>
@@ -45,7 +46,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Chris Paul</a>.
   </div>
 </body>
 </html>
