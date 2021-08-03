@@ -67,8 +67,8 @@ body{
     background-color: var(--color-soft-violet);
 }
 
-.preview-card > .preview-card__image-div[src-name="mobile"]{
-    background-image: url(/images/image-header-mobile.jpg);
+.preview-card > .preview-card__image-div{
+    background-image: url(../images/image-header-mobile.jpg);
 }
 
 .preview-card__header,
@@ -176,6 +176,10 @@ body{
         border-radius: 0;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
+    }
+
+    .preview-card > .preview-card__image-div{
+        background-image: url(../images/image-header-desktop.jpg);
     }
 }
 
